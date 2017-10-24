@@ -1,7 +1,7 @@
 # express-starter
-Starter project using NodeJS &amp; Express
+### Starter project using ES2016 NodeJS &amp; Express
+##### Babelize everything because we love import statemennts
 
-TODO: Unit and integration test starter
-TODO: Webpack and front-end starter
-TODO: DB conn & DB Config starter
-TODO: Routefile starter
+* TODO: Webpack and front-end starter
+* TODO: DB conn & DB Config starter
+* TODO: Routefile starter
