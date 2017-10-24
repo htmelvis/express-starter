@@ -3,18 +3,17 @@ import bodyParser from 'body-parser';
 import fs from 'fs';
 import session from 'express-session';
 
+import defaultRoutes from './routes/defaultRoutes';
+
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.use(express.static('public'));
-
 app.set('view engine', 'ejs');
 app.set('views', __dirname+'/views');
 
-
-app.use(function (req, res, next) {
+app.use( (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
@@ -28,8 +27,10 @@ app.use(session({
   saveUninitialized: false
 }));
 
-app.get('/', (req, res) => {
-    res.send('Go!');
+defaultRoutes(app);
+
+app.use( (req, res) => {
+  res.status(404).render('404.ejs');
 });
 
 export default app;

@@ -1,18 +1,13 @@
 .DS_Store
-.idea/*
-node_modules/
+node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 test/unit/coverage
 test/e2e/reports
 selenium-debug.log
-.idea/
 .idea
-public/assets/*
-public/assets
-public/assets/
-public/manuals/*
+public/dist
 
 # Logs
 logs
